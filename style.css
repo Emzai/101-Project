@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  background: url('url_to_a_starry_sky_image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  
+}
