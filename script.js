@@ -1,6 +1,7 @@
 const slides = document.querySelector('.slides');
 const thumbnails = document.querySelectorAll('.thumbnails img');
 const factBox = document.getElementById('factBox');
+const randomFactDiv = document.getElementById('randomFact');
 
 const total = slides.children.length;
 let index = 0;
@@ -14,6 +15,17 @@ const facts = [
     "Uranus rotates on its side, making it unique among planets.",
     "Mercury is the closest planet to the Sun and the smallest in our solar system.",
     "Neptune is the farthest planet and has the strongest winds in the solar system."
+];
+
+const extraFacts = [
+    "Venus spins backward compared to most planets.",
+    "Mars has the tallest volcano in the solar system.",
+    "Jupiter has over 79 moons.",
+    "Saturn's rings are made mostly of ice particles.",
+    "Mercury has almost no atmosphere.",
+    "Neptune has the fastest winds in the solar system.",
+    "Uranus was the first planet discovered with a telescope.",
+    "Earth is the only planet known to support life."
 ];
 
 function showSlide(i) {
@@ -43,6 +55,15 @@ toggleBtn.addEventListener('click', () => {
         toggleBtn.textContent = 'Show Facts';
     }
 });
+
+// Random extra facts
+function showRandomFact() {
+    const randomIndex = Math.floor(Math.random() * extraFacts.length);
+    randomFactDiv.textContent = extraFacts[randomIndex];
+}
+
+setInterval(showRandomFact, 5000);
+showRandomFact();
 
 // Shooting stars
 function createShootingStar() {

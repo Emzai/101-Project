@@ -134,6 +134,14 @@ h1 {
     line-height: 1.5;
 }
 
+.random-fact {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #cce0ff;
+    text-align: center;
+    font-style: italic;
+}
+
 .shooting-star {
     position: absolute;
     width: 2px;
