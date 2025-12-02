@@ -7,14 +7,14 @@ const total = slides.children.length;
 let index = 0;
 
 const facts = [
-    "Earth is our home planet and the third planet from the Sun.",
-    "Jupiter is the largest planet and has a Great Red Spot, a giant storm.",
-    "Saturn is famous for its beautiful rings made of ice and rock.",
-    "Mars is known as the Red Planet because of its iron-rich dust.",
-    "Venus is the hottest planet and is often called Earth's twin because of its similar size.",
-    "Uranus rotates on its side, making it unique among planets.",
-    "Mercury is the closest planet to the Sun and the smallest in our solar system.",
-    "Neptune is the farthest planet and has the strongest winds in the solar system."
+    "Earth is our home planet and the third planet from the Sun. It is the only planet known to support life.",
+    "Jupiter is the largest planet and has a giant storm called the Great Red Spot.",
+    "Saturn is famous for its beautiful rings made of ice and rock. It is the second-largest planet in the solar system.",
+    "Mars is called the Red Planet because of its reddish soil caused by iron. It has the tallest volcano in the solar system called Olympus Mons.",
+    "Venus is the hottest planet because of its thick atmosphere full of greenhouse gases. It is similar in size to Earth, so sometimes it’s called Earth’s twin.",
+    "Uranus rotates on its side, making it unique among the planets. It is a blue-green gas giant because of the methane in its atmosphere.",
+    "Mercury is the closest planet to the Sun and the smallest planet in our solar system. It has very little atmosphere, so it is extremely hot in the day and freezing at night.",
+    "Neptune is the farthest planet from the Sun. It has the strongest winds in the solar system and a dark, stormy atmosphere."
 ];
 
 const extraFacts = [
