@@ -1,77 +1,95 @@
 body {
-  font-family: sans-serif;
-  background: url('url_to_a_starry_sky_image.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    margin: 0;
 }
 
-.container {
-  width: 80%;
-  max-width: 1200px;
-  height: 600px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+h1 {
+    margin-bottom: 20px;
 }
 
-.slide {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
+.slider {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #000;  
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.item {
-  flex: 0 0 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
 }
 
-.item .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate (-50%, -50%);
-  text-align: center;
-  padding: 20px;
-  background-color: rgba( 0, 0, 0, 0.6);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;           
+    background-color: black;
+    flex-shrink: 0;
 }
 
-.item .name {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(70,130,180,0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 10;
 }
 
-.item .des {
-  font-size: 1.3em;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.prev:hover, .next:hover {
+    background-color: rgba(70,130,180,1);
 }
 
-.item button {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
 }
 
-.item button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+.thumbnails img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.thumbnails img.active {
+    border-color: #4682b4;
+}
+
+.fact-box {
+    margin-top: 15px;
+    width: 500px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
 }

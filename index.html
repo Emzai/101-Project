@@ -1,94 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UI-Compatible" content="IE-edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Slider</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Responsive Planets Slider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div class="container">
-  <div class="slide">
-    
-    <div class="item" style="background-image: url(./images/img1.jpg)";>
-      <div class="content">
-        <div class="name">Earth</div>
-          <div class="des">Earth – our home planet – is the third planet from the Sun, and the fifth largest planet. </div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-    <div class="item" style="background-image: url(./images/img2.jpg)";>
-      <div class="content">
-        <div class="name">Jupiter</div>
-          <div class="des">Jupiter is the fifth planet from the Sun, and the largest planet in our solar system.</div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-     <div class="item" style="background-image: url(./images/img3.jpg)";>
-      <div class="content">
-        <div class="name">Saturn</div>
-          <div class="des">Saturn is the sixth planet from the Sun, the second largest planet in our solar system.</div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-    <div class="item" style="background-image: url(./images/img4.jpg)";>
-      <div class="content">
-        <div class="name">Mars</div>
-          <div class="des">Mars is the fourth planet from the Sun, and the seventh largest planet.</div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-    <div class="item" style="background-image: url(./images/img5.jpg)";>
-      <div class="content">
-        <div class="name">Venus</div>
-          <div class="des">Venus is the second planet from the Sun, and the sixth largest planet. It’s the hottest planet in our solar system.</div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-    <div class="item" style="background-image: url(./images/img6.jpg)";>
-      <div class="content">
-        <div class="name">Uranus</div>
-          <div class="des">Uranus is the seventh planet from the Sun, and the third largest planet in our solar system. It appears to spin sideways</div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-    <div class="item" style="background-image: url(./images/img7.jpg)";>
-      <div class="content">
-        <div class="name">Mercury</div>
-          <div class="des">Mercury is the closest planet to the Sun, and the smallest planet in our solar system. It's only slightly larger than Earth's Moon.</div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-    <div class="item" style="background-image: url(./images/img8.jpg)";>
-      <div class="content">
-        <div class="name">Neptune</div>
-          <div class="des">Neptune is the eighth, and most distant planet from the Sun. It’s the fourth-largest, and the first planet discovered with math.</div>
-            <button>See more</button>
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  
-</div>
-</body>
 
+    <h1>Planets</h1>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="/images/img1.jpg" alt="Planet 1">
+            <img src="/images/img2.jpg" alt="Planet 2">
+            <img src="/images/img3.jpg" alt="Planet 3">
+            <img src="/images/img4.jpg" alt="Planet 4">
+            <img src="/images/img5.jpg" alt="Planet 5">
+            <img src="/images/img6.jpg" alt="Planet 6">
+            <img src="/images/img7.jpg" alt="Planet 7">
+            <img src="/images/img8.jpg" alt="Planet 8">
+        </div>
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+    </div>
+<div class="fact-box" id="factBox">
+    Earth is our home planet and the third planet from the Sun.
+</div>
+    <div class="thumbnails">
+        <img src="/images/img1.jpg" onclick="currentSlide(0)" class="active">
+        <img src="/images/img2.jpg" onclick="currentSlide(1)">
+        <img src="/images/img3.jpg" onclick="currentSlide(2)">
+        <img src="/images/img4.jpg" onclick="currentSlide(3)">
+        <img src="/images/img5.jpg" onclick="currentSlide(4)">
+        <img src="/images/img6.jpg" onclick="currentSlide(5)">
+        <img src="/images/img7.jpg" onclick="currentSlide(6)">
+        <img src="/images/img8.jpg" onclick="currentSlide(7)">
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
 </html>
