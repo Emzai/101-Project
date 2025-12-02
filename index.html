@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Planets Image Slider</title>
+    <title>Planets Night Slider</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="night">
 
-    <h1>Planets</h1>
+<h1>Planets</h1>
 
+<section id="sliderSection">
     <div class="slider">
         <div class="slides">
             <img src="/images/img1.jpg" alt="Planet 1">
@@ -23,8 +24,9 @@
         <button class="prev" onclick="prevSlide()">❮</button>
         <button class="next" onclick="nextSlide()">❯</button>
     </div>
-<div class="fact-box" id="factBox">
-</div>
+</section>
+
+<section id="gallerySection">
     <div class="thumbnails">
         <img src="/images/img1.jpg" onclick="currentSlide(0)" class="active">
         <img src="/images/img2.jpg" onclick="currentSlide(1)">
@@ -36,7 +38,10 @@
         <img src="/images/img8.jpg" onclick="currentSlide(7)">
     </div>
 
-    <script src="script.js"></script>
-    
+    <button id="toggleFactBtn">Hide Facts</button>
+    <div class="fact-box" id="factBox"></div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

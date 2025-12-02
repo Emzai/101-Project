@@ -22,23 +22,39 @@ function showSlide(i) {
     else index = i;
 
     slides.style.transform = 'translateX(' + (-index * 100) + '%)';
-
     thumbnails.forEach(img => img.classList.remove('active'));
     thumbnails[index].classList.add('active');
-
     factBox.textContent = facts[index];
 }
 
-function nextSlide() {
-    showSlide(index + 1);
-}
-
-function prevSlide() {
-    showSlide(index - 1);
-}
-
-function currentSlide(i) {
-    showSlide(i);
-}
+function nextSlide() { showSlide(index + 1); }
+function prevSlide() { showSlide(index - 1); }
+function currentSlide(i) { showSlide(i); }
 
 showSlide(index);
+
+const toggleBtn = document.getElementById('toggleFactBtn');
+toggleBtn.addEventListener('click', () => {
+    if (factBox.style.display === 'none') {
+        factBox.style.display = 'block';
+        toggleBtn.textContent = 'Hide Facts';
+    } else {
+        factBox.style.display = 'none';
+        toggleBtn.textContent = 'Show Facts';
+    }
+});
+
+// Shooting stars
+function createShootingStar() {
+    const shooting = document.createElement('div');
+    shooting.classList.add('shooting-star');
+    shooting.style.top = Math.random() * 50 + 'vh';
+    shooting.style.left = Math.random() * 100 + 'vw';
+    document.body.appendChild(shooting);
+    setTimeout(() => shooting.remove(), 2000);
+}
+
+setInterval(() => {
+    createShootingStar();
+    setTimeout(createShootingStar, 400);
+}, 2000);
