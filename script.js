@@ -56,7 +56,6 @@ toggleBtn.addEventListener('click', () => {
     }
 });
 
-// Random extra facts
 function showRandomFact() {
     const randomIndex = Math.floor(Math.random() * extraFacts.length);
     randomFactDiv.textContent = extraFacts[randomIndex];
@@ -65,7 +64,6 @@ function showRandomFact() {
 setInterval(showRandomFact, 5000);
 showRandomFact();
 
-// Shooting stars
 function createShootingStar() {
     const shooting = document.createElement('div');
     shooting.classList.add('shooting-star');
